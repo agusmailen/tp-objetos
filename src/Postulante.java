@@ -31,6 +31,8 @@ public class Postulante {
         cursos.add(curso);
     }
 
+    public HashSet<Curso> getCursos() { return cursos; }
+
     public int getEdad(){
         return this.edad;
     }
