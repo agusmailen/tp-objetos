@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        //Hostel Maktub en Córdoba
+
+        Hostel voluntariadoMaktub = new Hostel(15, "Córdoba - Los Cocos", 19, 5);
+
     }
 }

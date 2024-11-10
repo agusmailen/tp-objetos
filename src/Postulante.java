@@ -1,6 +1,9 @@
 import java.util.HashSet;
 
 public class Postulante {
+    private int edad;
+
+    private int puntuacion;
 
     private HashSet<Idioma> idiomas = new HashSet<Idioma>();
 
@@ -28,7 +31,15 @@ public class Postulante {
         cursos.add(curso);
     }
 
+    public int getEdad(){
+        return this.edad;
+    }
+
+    public int getPuntuacion(){
+        return this.puntuacion;
+    }
+
     public void puntuarVoluntariado(Voluntariado voluntariado) {
-        //TODO: crear una interfaz para que sea recibida como parametro de esta función
+        //TO DO: crear una interfaz para que sea recibida como parametro de esta función
     }
 }

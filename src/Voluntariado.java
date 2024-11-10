@@ -2,14 +2,19 @@ import java.util.HashSet;
 
 public  abstract class Voluntariado {
 
-    private int cantidadDeDias;
+    protected int cantidadDeDias;
 
-    private String ubicacion;
+    protected String ubicacion;
 
-    private HashSet<Postulante> pasticipantes = new HashSet<Postulante>();
+    protected HashSet<Postulante> pasticipantes = new HashSet<Postulante>();
+
+    public Voluntariado(int cantidadDeDias, String ubicacion) {
+        this.cantidadDeDias = cantidadDeDias;
+        this.ubicacion = ubicacion;
+    }
 
     public abstract boolean puedePostularse(Postulante voluntario);
 
     public abstract void puntuarParticipantes(Postulante voluntario);
-    //TODO: crear una interfaz para que sea recibida como parametro de esta función
+    //TO DO: crear una interfaz para que sea recibida como parametro de esta función
 }
