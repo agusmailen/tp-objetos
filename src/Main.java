@@ -3,7 +3,7 @@ public class Main {
 
         //Hostel Maktub en Córdoba
 
-        Hostel voluntariadoMaktub = new Hostel(15, "Córdoba - Los Cocos", 19, 5);
+        Hostel voluntariadoMaktub = new Hostel(15, "Córdoba - Los Cocos", 19, 5, 25);
 
     }
 }

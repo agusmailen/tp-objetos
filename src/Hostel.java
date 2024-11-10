@@ -3,14 +3,17 @@ public class Hostel extends Voluntariado {
 
     private int edadMinima;
 
-    public Hostel(int cantidadDeDias, String ubicacion, int edadMinima, int cupoMaximo) {
+    private int puntuacionMinima;
+
+    public Hostel(int cantidadDeDias, String ubicacion, int edadMinima, int cupoMaximo, int puntuacionMinima) {
         super(cantidadDeDias, ubicacion);
         this.edadMinima = edadMinima;
         this. cupoMaximo = cupoMaximo;
+        this.puntuacionMinima = puntuacionMinima;
     }
 
     public boolean puedePostularse(Postulante voluntario){
-        boolean aceptarParticipante = voluntario.getEdad() >= edadMinima &&  pasticipantes.size() < edadMinima;
+        boolean aceptarParticipante = voluntario.getEdad() >= edadMinima &&  pasticipantes.size() < cupoMaximo && voluntario.getPuntuacion() >= puntuacionMinima;
         if(aceptarParticipante) {
             voluntario.agregarVoluntariado(this);
         }
