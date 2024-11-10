@@ -11,6 +11,11 @@ public class Postulante {
 
     private HashSet<Voluntariado> voluntariados = new HashSet<Voluntariado>();
 
+    public Postulante(int edad, int puntuacion) {
+        this.edad = edad;
+        this.puntuacion = puntuacion;
+    }
+
     public HashSet<Idioma> getIdiomas() {
         return idiomas;
     }
