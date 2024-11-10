@@ -16,6 +16,7 @@ public class Hostel extends Voluntariado {
         boolean aceptarParticipante = voluntario.getEdad() >= edadMinima &&  pasticipantes.size() < cupoMaximo && voluntario.getPuntuacion() >= puntuacionMinima;
         if(aceptarParticipante) {
             voluntario.agregarVoluntariado(this);
+            pasticipantes.add(voluntario);
         }
         return aceptarParticipante;
     }

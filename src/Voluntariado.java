@@ -13,6 +13,10 @@ public  abstract class Voluntariado {
         this.ubicacion = ubicacion;
     }
 
+    public HashSet<Postulante> getPasticipantes() {
+        return pasticipantes;
+    }
+
     public abstract boolean puedePostularse(Postulante voluntario);
 
     public abstract void puntuarParticipantes(Postulante voluntario);
