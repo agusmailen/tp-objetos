@@ -23,5 +23,23 @@ public class Main {
         System.out.println("Experiencia de Matias" + Matias.getVoluntariados());
         System.out.println("Experiencia de Camila" + Camila.getVoluntariados());
 
+
+        //Voluntariado educación
+
+        Curso matematica = new Curso();
+
+        Educacion voluntariadoMatematica = new Educacion(20, "España - Malaga", matematica);
+        Postulante Micaela = new Postulante(23, 12);
+        Postulante Rocio = new Postulante(22, 0);
+        Rocio.agregarCurso(matematica);
+        System.out.println("Experiencia de Micaela" + Micaela.getVoluntariados());
+        System.out.println("Experiencia de Rocio" + Rocio.getVoluntariados());
+        System.out.println("//");
+        System.out.println("Micaela puede postularse: " + voluntariadoMatematica.puedePostularse(Micaela));
+        System.out.println("Rocio puede postularse: " + voluntariadoMatematica.puedePostularse(Rocio));
+        System.out.println("//");
+        System.out.println("Experiencia de Micaela" + Micaela.getVoluntariados());
+        System.out.println("Experiencia de Rocio" + Rocio.getVoluntariados());
+
     }
 }

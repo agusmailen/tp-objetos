@@ -1,4 +1,4 @@
-public class Educacion extends Voluntariado{
+public class Educacion extends Voluntariado {
 
     private Curso cursoRequerido;
 
@@ -7,13 +7,14 @@ public class Educacion extends Voluntariado{
         this.cursoRequerido = cursoRequerido;
     }
 
-    @Override
     public boolean puedePostularse(Postulante voluntario) {
-        return voluntario.getCursos().contains(cursoRequerido);
-    }
+        boolean aceptarParticipante = voluntario.getCursos().contains(cursoRequerido);
+        if(aceptarParticipante) {
+            voluntario.agregarVoluntariado(this);
+            pasticipantes.add(voluntario);
+        }
+        return aceptarParticipante;
+    };
 
-    @Override
-    public void puntuarParticipantes(Postulante voluntario) {
-
-    }
+    public void puntuarParticipantes(Postulante voluntario) {}
 }
