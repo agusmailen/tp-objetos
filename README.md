@@ -9,7 +9,8 @@ Al finalizar el evento, según el tipo, se le entrega a los participantes una pu
 
 Diagrama UML
 
-![image](https://github.com/user-attachments/assets/0126ba36-db38-44a7-a969-116bf0531d3e)
+![image](https://github.com/user-attachments/assets/1e8a2205-d9f4-4147-baf3-096a4c721c99)
+
 
 
 Autores
