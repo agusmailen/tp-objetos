@@ -8,12 +8,16 @@ public class EventoExterior extends Voluntariado {
     }
 
     public boolean puedePostularse(Postulante voluntario) {
-        boolean aceptarParticipante = voluntario.getIdiomas().contains(idiomaRequerido);
-        if(aceptarParticipante) {
-            voluntario.agregarVoluntariado(this);
-            pasticipantes.add(voluntario);
+        boolean puedePostularse = false;
+        for (Idioma idioma : voluntario.getIdiomas()) {
+            if (idioma.getNombre().equals(this.idiomaRequerido.getNombre()) && idioma.getNivel() >= this.idiomaRequerido.getNivel()) {
+                puedePostularse = true;
+                voluntario.agregarVoluntariado(this);
+                pasticipantes.add(voluntario);
+            }
         }
-        return aceptarParticipante;
+
+        return puedePostularse;
     };
 
     public void puntuarParticipantes(Postulante voluntario) {}
