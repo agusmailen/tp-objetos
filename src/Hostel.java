@@ -12,7 +12,7 @@ public class Hostel extends Voluntariado {
         this.puntuacionMinima = puntuacionMinima;
     }
 
-    public boolean puedePostularse(Postulante voluntario){
+    public boolean aceptarPostulante(Postulante voluntario){
         boolean aceptarParticipante = voluntario.getEdad() >= edadMinima &&  pasticipantes.size() < cupoMaximo && voluntario.getPuntuacion() >= puntuacionMinima;
         if(aceptarParticipante) {
             voluntario.agregarVoluntariado(this);
@@ -21,7 +21,8 @@ public class Hostel extends Voluntariado {
         return aceptarParticipante;
     }
 
-    public void puntuarParticipantes(Postulante voluntario){
-        //TO DO: crear una interfaz para que sea recibida como parametro de esta función
+    public void puntuarParticipantes(){
+        //
     }
+
 }

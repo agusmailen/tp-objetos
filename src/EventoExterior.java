@@ -2,19 +2,25 @@ public class EventoExterior extends Voluntariado {
     
     private Idioma idiomaRequerido;
 
-    public EventoExterior(int cantidadDeDias, String ubicacion, Idioma idiomaRequerido) {
+    private int nivelMinimo;
+
+    public EventoExterior(int cantidadDeDias, String ubicacion, Idioma idiomaRequerido, int nivelMinimo) {
         super(cantidadDeDias, ubicacion);
         this.idiomaRequerido = idiomaRequerido;
+        this.nivelMinimo = nivelMinimo;
     }
 
-    public boolean puedePostularse(Postulante voluntario) {
+    public boolean aceptarPostulante(Postulante voluntario) {
         boolean aceptarParticipante = voluntario.getIdiomas().contains(idiomaRequerido);
-        if(aceptarParticipante) {
-            voluntario.agregarVoluntariado(this);
-            pasticipantes.add(voluntario);
+        if(!aceptarParticipante) {
+            throw new ExcepcionIdioma("No es posible aceptar a esta postulante");
         }
+        pasticipantes.add(voluntario);
+        voluntario.agregarVoluntariado(this);
         return aceptarParticipante;
     };
 
-    public void puntuarParticipantes(Postulante voluntario) {}
+    public void puntuarParticipantes() {
+        //
+    }
 }

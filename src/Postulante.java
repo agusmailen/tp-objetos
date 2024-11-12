@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Postulante {
     private int edad;
@@ -9,7 +11,7 @@ public class Postulante {
 
     private HashSet<Curso> cursos = new HashSet<Curso>();
 
-    private HashSet<Voluntariado> voluntariados = new HashSet<Voluntariado>();
+    private List<Voluntariado> voluntariados = new ArrayList<Voluntariado>();
 
     public Postulante(int edad, int puntuacion) {
         this.edad = edad;
@@ -20,7 +22,7 @@ public class Postulante {
         return idiomas;
     }
 
-    public HashSet<Voluntariado> getVoluntariados() {
+    public List<Voluntariado> getVoluntariados() {
         return voluntariados;
     }
 
@@ -36,7 +38,9 @@ public class Postulante {
         cursos.add(curso);
     }
 
-    public HashSet<Curso> getCursos() { return cursos; }
+    public HashSet<Curso> getCursos() {
+        return cursos;
+    }
 
     public int getEdad(){
         return this.edad;
@@ -46,7 +50,7 @@ public class Postulante {
         return this.puntuacion;
     }
 
-    public void puntuarVoluntariado(Voluntariado voluntariado) {
-        //TO DO: crear una interfaz para que sea recibida como parametro de esta función
+    public void recibirPuntos(int puntosDatos) {
+        this.puntuacion += puntosDatos;
     }
 }

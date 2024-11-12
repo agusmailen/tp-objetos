@@ -7,7 +7,7 @@ public class Educacion extends Voluntariado {
         this.cursoRequerido = cursoRequerido;
     }
 
-    public boolean puedePostularse(Postulante voluntario) {
+    public boolean aceptarPostulante(Postulante voluntario) {
         boolean aceptarParticipante = voluntario.getCursos().contains(cursoRequerido);
         if(aceptarParticipante) {
             voluntario.agregarVoluntariado(this);
@@ -16,5 +16,7 @@ public class Educacion extends Voluntariado {
         return aceptarParticipante;
     };
 
-    public void puntuarParticipantes(Postulante voluntario) {}
+    public void puntuarParticipantes() {
+        //
+    }
 }

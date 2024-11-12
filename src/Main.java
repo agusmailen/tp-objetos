@@ -15,9 +15,9 @@ public class Main {
         System.out.println("Experiencia de Matias" + Matias.getVoluntariados());
         System.out.println("Experiencia de Camila" + Camila.getVoluntariados());
         System.out.println("//");
-        System.out.println("Camila puede postularse: " + voluntariadoMaktub.puedePostularse(Camila));
-        System.out.println("Carlos puede postularse: " + voluntariadoMaktub.puedePostularse(Carlos));
-        System.out.println("Matias puede postularse: " + voluntariadoMaktub.puedePostularse(Matias));
+        System.out.println("Camila puede postularse: " + voluntariadoMaktub.aceptarPostulante(Camila));
+        System.out.println("Carlos puede postularse: " + voluntariadoMaktub.aceptarPostulante(Carlos));
+        System.out.println("Matias puede postularse: " + voluntariadoMaktub.aceptarPostulante(Matias));
         System.out.println("//");
         System.out.println("Experiencia de Carlos" + Carlos.getVoluntariados());
         System.out.println("Experiencia de Matias" + Matias.getVoluntariados());
@@ -35,8 +35,8 @@ public class Main {
         System.out.println("Experiencia de Micaela" + Micaela.getVoluntariados());
         System.out.println("Experiencia de Rocio" + Rocio.getVoluntariados());
         System.out.println("//");
-        System.out.println("Micaela puede postularse: " + voluntariadoMatematica.puedePostularse(Micaela));
-        System.out.println("Rocio puede postularse: " + voluntariadoMatematica.puedePostularse(Rocio));
+        System.out.println("Micaela puede postularse: " + voluntariadoMatematica.aceptarPostulante(Micaela));
+        System.out.println("Rocio puede postularse: " + voluntariadoMatematica.aceptarPostulante(Rocio));
         System.out.println("//");
         System.out.println("Experiencia de Micaela" + Micaela.getVoluntariados());
         System.out.println("Experiencia de Rocio" + Rocio.getVoluntariados());
@@ -46,7 +46,7 @@ public class Main {
         Idioma inglesMedio = new Idioma("Ingles", 2);
         Idioma inglesBasico = new Idioma("Ingles", 1);
 
-        EventoExterior voluntariadoIngles = new EventoExterior(10, "Australia - Sidney", inglesMedio);
+        EventoExterior voluntariadoIngles = new EventoExterior(10, "Australia - Sidney", inglesMedio, 2);
 
         Postulante Juan = new Postulante(25, 0);
         Postulante Maria = new Postulante(20, 0);
@@ -57,16 +57,18 @@ public class Main {
         System.out.println("Experiencia de Maria" + Maria.getVoluntariados());
         System.out.println("Experiencia de Ana" + Ana.getVoluntariados());
         System.out.println("//");
-        System.out.println("Juan puede postularse: " + voluntariadoIngles.puedePostularse(Juan));
-        System.out.println("Maria puede postularse: " + voluntariadoIngles.puedePostularse(Maria));
-        System.out.println("Ana puede postularse: " + voluntariadoIngles.puedePostularse(Ana));
+
+        try {
+            System.out.println("Juan puede postularse: " + voluntariadoIngles.aceptarPostulante(Juan));
+            System.out.println("Maria puede postularse: " + voluntariadoIngles.aceptarPostulante(Maria));
+            System.out.println("Ana puede postularse: " + voluntariadoIngles.aceptarPostulante(Ana));
+        } catch (ExcepcionIdioma excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
         System.out.println("//");
         System.out.println("Experiencia de Juan" + Juan.getVoluntariados());
         System.out.println("Experiencia de Maria" + Maria.getVoluntariados());
         System.out.println("Experiencia de Ana" + Ana.getVoluntariados());
-
-
-
-
+        System.out.println("final");
     }
 }

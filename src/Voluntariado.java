@@ -6,6 +6,8 @@ public  abstract class Voluntariado {
 
     protected String ubicacion;
 
+    protected int puntuacion;
+
     protected HashSet<Postulante> pasticipantes = new HashSet<Postulante>();
 
     public Voluntariado(int cantidadDeDias, String ubicacion) {
@@ -17,8 +19,12 @@ public  abstract class Voluntariado {
         return pasticipantes;
     }
 
-    public abstract boolean puedePostularse(Postulante voluntario);
+    public abstract boolean aceptarPostulante(Postulante voluntario);
 
-    public abstract void puntuarParticipantes(Postulante voluntario);
-    //TO DO: crear una interfaz para que sea recibida como parametro de esta función
+    public abstract void puntuarParticipantes();
+
+    public  void recibirPuntos(int puntuacionDada) {
+        this.puntuacion += puntuacionDada;
+    }
+
 }
