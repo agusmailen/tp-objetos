@@ -41,5 +41,32 @@ public class Main {
         System.out.println("Experiencia de Micaela" + Micaela.getVoluntariados());
         System.out.println("Experiencia de Rocio" + Rocio.getVoluntariados());
 
+        //Voluntariado exterior
+
+        Idioma inglesMedio = new Idioma("Ingles", 2);
+        Idioma inglesBasico = new Idioma("Ingles", 1);
+
+        EventoExterior voluntariadoIngles = new EventoExterior(10, "Australia - Sidney", inglesMedio);
+
+        Postulante Juan = new Postulante(25, 0);
+        Postulante Maria = new Postulante(20, 0);
+        Postulante Ana = new Postulante(22, 0);
+        Juan.agregarIdioma(inglesMedio);
+        Ana.agregarIdioma(inglesBasico);
+        System.out.println("Experiencia de Juan" + Juan.getVoluntariados());
+        System.out.println("Experiencia de Maria" + Maria.getVoluntariados());
+        System.out.println("Experiencia de Ana" + Ana.getVoluntariados());
+        System.out.println("//");
+        System.out.println("Juan puede postularse: " + voluntariadoIngles.puedePostularse(Juan));
+        System.out.println("Maria puede postularse: " + voluntariadoIngles.puedePostularse(Maria));
+        System.out.println("Ana puede postularse: " + voluntariadoIngles.puedePostularse(Ana));
+        System.out.println("//");
+        System.out.println("Experiencia de Juan" + Juan.getVoluntariados());
+        System.out.println("Experiencia de Maria" + Maria.getVoluntariados());
+        System.out.println("Experiencia de Ana" + Ana.getVoluntariados());
+
+
+
+
     }
 }
