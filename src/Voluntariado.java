@@ -8,6 +8,8 @@ public  abstract class Voluntariado {
 
     protected int puntuacion;
 
+    protected int puntuacionBaseEntregable;
+
     protected HashSet<Postulante> pasticipantes = new HashSet<Postulante>();
 
     public Voluntariado(int cantidadDeDias, String ubicacion) {

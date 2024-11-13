@@ -46,7 +46,7 @@ public class Main {
         Idioma inglesMedio = new Idioma("Ingles", 2);
         Idioma inglesBasico = new Idioma("Ingles", 1);
 
-        EventoExterior voluntariadoIngles = new EventoExterior(10, "Australia - Sidney", inglesMedio, 2);
+        EventoExterior voluntariadoIngles = new EventoExterior(10, "Australia - Sidney", inglesMedio);
 
         Postulante Juan = new Postulante(25, 0);
         Postulante Maria = new Postulante(20, 0);

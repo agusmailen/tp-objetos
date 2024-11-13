@@ -11,4 +11,8 @@ public class Idioma {
     public int getNivel() {
         return this.nivel;
     }
+
+    public String getNombre() {
+        return this.nombre;
+    }
 }
