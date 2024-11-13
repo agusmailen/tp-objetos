@@ -25,4 +25,8 @@ public class Hostel extends Voluntariado {
         //
     }
 
+    public void recibirPuntos() {
+
+    }
+
 }

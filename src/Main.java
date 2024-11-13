@@ -71,4 +71,9 @@ public class Main {
         System.out.println("Experiencia de Ana" + Ana.getVoluntariados());
         System.out.println("final");
     }
+
+    //aplicar metodo putuar en hostel y en educacion
+    //modificar metodo acptarParticipante boolean por void
+    //crear una sola excepcion
+    //modificar constructor para voluntariado para asignarme una puntuacion a dar por defecto.
 }
