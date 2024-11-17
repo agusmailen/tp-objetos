@@ -5,8 +5,8 @@ public class Hostel extends Voluntariado {
 
     private int puntuacionMinima;
 
-    public Hostel(int cantidadDeDias, String ubicacion, int edadMinima, int cupoMaximo, int puntuacionMinima) {
-        super(cantidadDeDias, ubicacion);
+    public Hostel(int cantidadDeDias, String ubicacion, int puntuacionBaseEntregable, int edadMinima, int cupoMaximo, int puntuacionMinima) {
+        super(cantidadDeDias, ubicacion, puntuacionBaseEntregable);
         this.edadMinima = edadMinima;
         this. cupoMaximo = cupoMaximo;
         this.puntuacionMinima = puntuacionMinima;
@@ -27,6 +27,4 @@ public class Hostel extends Voluntariado {
             participante.recibirPuntos(puntuacion);
         }
     }
-
-
 }

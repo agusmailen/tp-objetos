@@ -12,12 +12,7 @@ public  abstract class Voluntariado {
 
     protected HashSet<Postulante> pasticipantes = new HashSet<Postulante>();
 
-    public Voluntariado(int cantidadDeDias, String ubicacion) {
-        this.cantidadDeDias = cantidadDeDias;
-        this.ubicacion = ubicacion;
-    }
-
-    public Voluntariado(int cantidadDeDias, String ubicacion,int puntuacionBaseEntregable) {
+    public Voluntariado(int cantidadDeDias, String ubicacion, int puntuacionBaseEntregable) {
         this.cantidadDeDias = cantidadDeDias;
         this.ubicacion = ubicacion;
         this.puntuacionBaseEntregable = puntuacionBaseEntregable;
@@ -29,7 +24,11 @@ public  abstract class Voluntariado {
 
     public abstract void aceptarPostulante(Postulante voluntario);
 
-    public abstract void puntuarParticipantes();
+    public  void puntuarParticipantes() {
+        for (Postulante participante: pasticipantes) {
+            participante.recibirPuntos(puntuacionBaseEntregable);
+        }
+    }
 
     public  void recibirPuntos(int puntuacionDada) {
         this.puntuacion += puntuacionDada;

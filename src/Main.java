@@ -3,9 +3,9 @@ public class Main {
 
         //Hostel Maktub en Córdoba
 
-        Hostel voluntariadoRosas = new Hostel(9, "Bariloche", 21, 3, 10);
+        Hostel voluntariadoRosas = new Hostel(10, "jeje", 10, 18, 5, 25);
 
-        Hostel voluntariadoMaktub = new Hostel(15, "Córdoba - Los Cocos", 19, 5, 25);
+        Hostel voluntariadoMaktub = new Hostel(15, "Córdoba - Los Cocos", 15,19, 5, 25);
         Postulante camila = new Postulante(21, 0);
         Postulante carlos = new Postulante(23, 30);
         Postulante matias = new Postulante(18, 26);
@@ -32,7 +32,7 @@ public class Main {
 
         Curso matematica = new Curso();
 
-        Educacion voluntariadoMatematica = new Educacion(20, "España - Malaga", matematica);
+        Educacion voluntariadoMatematica = new Educacion(20, "España - Malaga", 20,matematica);
         Postulante micaela = new Postulante(23, 12);
         Postulante rocio = new Postulante(22, 0);
         rocio.agregarCurso(matematica);
@@ -90,7 +90,4 @@ public class Main {
         System.out.println(rocio.getPuntuacion());
         System.out.println(carlos.getPuntuacion());
     }
-
-    //aplicar metodo putuar en hostel y en educacion
-    //modificar constructor para voluntariado para asignarme una puntuacion a dar por defecto.
 }

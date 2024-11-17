@@ -24,6 +24,7 @@ public class EventoExterior extends Voluntariado {
         voluntario.agregarVoluntariado(this);
     };
 
+   @Override
     public void puntuarParticipantes() {
         for (Postulante participante: pasticipantes) {
             int puntuacion = puntuacionBaseEntregable + ( participante.getIdiomas().size() - 1 ) * 5;
