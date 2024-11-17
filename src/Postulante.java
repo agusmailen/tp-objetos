@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class Postulante {
+public class Postulante implements Puntuable {
     private int edad;
 
     private int puntuacion;

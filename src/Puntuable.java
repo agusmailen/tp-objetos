@@ -1,3 +1,3 @@
 public interface Puntuable {
-    void recibirPuntos();
+    void recibirPuntos(int puntosDatos);
 }

@@ -17,6 +17,12 @@ public  abstract class Voluntariado {
         this.ubicacion = ubicacion;
     }
 
+    public Voluntariado(int cantidadDeDias, String ubicacion,int puntuacionBaseEntregable) {
+        this.cantidadDeDias = cantidadDeDias;
+        this.ubicacion = ubicacion;
+        this.puntuacionBaseEntregable = puntuacionBaseEntregable;
+    }
+
     public HashSet<Postulante> getPasticipantes() {
         return pasticipantes;
     }

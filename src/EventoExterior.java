@@ -2,8 +2,8 @@ public class EventoExterior extends Voluntariado {
     
     private Idioma idiomaRequerido;
 
-    public EventoExterior(int cantidadDeDias, String ubicacion, Idioma idiomaRequerido) {
-        super(cantidadDeDias, ubicacion);
+    public EventoExterior(int cantidadDeDias, String ubicacion,int puntuacionBaseEntregable, Idioma idiomaRequerido) {
+        super(cantidadDeDias, ubicacion,puntuacionBaseEntregable);
         this.idiomaRequerido = idiomaRequerido;
     }
 

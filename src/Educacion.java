@@ -14,9 +14,12 @@ public class Educacion extends Voluntariado {
             pasticipantes.add(voluntario);
         }
         return aceptarParticipante;
-    };
+    }
 
     public void puntuarParticipantes() {
-        //
+        for (Postulante participante: pasticipantes) {
+            int puntuacion = 15;
+            participante.recibirPuntos(puntuacion);
+        }
     }
 }

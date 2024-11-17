@@ -22,11 +22,11 @@ public class Hostel extends Voluntariado {
     }
 
     public void puntuarParticipantes(){
-        //
+        for (Postulante participante: pasticipantes) {
+            int puntuacion = 10;
+            participante.recibirPuntos(puntuacion);
+        }
     }
 
-    public void recibirPuntos() {
-
-    }
 
 }
