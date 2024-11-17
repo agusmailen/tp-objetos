@@ -27,7 +27,7 @@ public  abstract class Voluntariado {
         return pasticipantes;
     }
 
-    public abstract boolean aceptarPostulante(Postulante voluntario);
+    public abstract void aceptarPostulante(Postulante voluntario);
 
     public abstract void puntuarParticipantes();
 

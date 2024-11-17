@@ -15,9 +15,13 @@ public class Main {
         System.out.println("Experiencia de Matias" + matias.getVoluntariados());
         System.out.println("Experiencia de Camila" + camila.getVoluntariados());
         System.out.println("//");
-        System.out.println("Camila puede postularse: " + voluntariadoMaktub.aceptarPostulante(camila));
-        System.out.println("Carlos puede postularse: " + voluntariadoMaktub.aceptarPostulante(carlos));
-        System.out.println("Matias puede postularse: " + voluntariadoMaktub.aceptarPostulante(matias));
+        try {
+            voluntariadoMaktub.aceptarPostulante(camila);
+            voluntariadoMaktub.aceptarPostulante(carlos);
+            voluntariadoMaktub.aceptarPostulante(matias);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
         System.out.println("//");
         System.out.println("Experiencia de Carlos" + carlos.getVoluntariados());
         System.out.println("Experiencia de Matias" + matias.getVoluntariados());
@@ -35,8 +39,12 @@ public class Main {
         System.out.println("Experiencia de micaela" + micaela.getVoluntariados());
         System.out.println("Experiencia de Rocio" + rocio.getVoluntariados());
         System.out.println("//");
-        System.out.println("micaela puede postularse: " + voluntariadoMatematica.aceptarPostulante(micaela));
-        System.out.println("Rocio puede postularse: " + voluntariadoMatematica.aceptarPostulante(rocio));
+        try {
+            voluntariadoMatematica.aceptarPostulante(micaela);
+            voluntariadoMatematica.aceptarPostulante(rocio);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
         System.out.println("//");
         System.out.println("Experiencia de micaela" + micaela.getVoluntariados());
         System.out.println("Experiencia de Rocio" + rocio.getVoluntariados());
@@ -59,10 +67,10 @@ public class Main {
         System.out.println("//");
 
         try {
-            System.out.println("Juan puede postularse: " + voluntariadoIngles.aceptarPostulante(juan));
-            System.out.println("Maria puede postularse: " + voluntariadoIngles.aceptarPostulante(maria));
-            System.out.println("ana puede postularse: " + voluntariadoIngles.aceptarPostulante(ana));
-        } catch (ExcepcionIdioma excepcion) {
+            voluntariadoIngles.aceptarPostulante(juan);
+            voluntariadoIngles.aceptarPostulante(maria);
+            voluntariadoIngles.aceptarPostulante(ana);
+        } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
         System.out.println("//");
@@ -84,7 +92,5 @@ public class Main {
     }
 
     //aplicar metodo putuar en hostel y en educacion
-    //modificar metodo acptarParticipante boolean por void
-    //crear una sola excepcion
     //modificar constructor para voluntariado para asignarme una puntuacion a dar por defecto.
 }

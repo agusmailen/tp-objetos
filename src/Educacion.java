@@ -7,13 +7,15 @@ public class Educacion extends Voluntariado {
         this.cursoRequerido = cursoRequerido;
     }
 
-    public boolean aceptarPostulante(Postulante voluntario) {
+    public void aceptarPostulante(Postulante voluntario) throws ExcepcionVoluntariado{
         boolean aceptarParticipante = voluntario.getCursos().contains(cursoRequerido);
-        if(aceptarParticipante) {
-            voluntario.agregarVoluntariado(this);
-            pasticipantes.add(voluntario);
+
+        if(!aceptarParticipante) {
+            throw new ExcepcionVoluntariado("No es posible aceptar a este postulante");
         }
-        return aceptarParticipante;
+
+        pasticipantes.add(voluntario);
+        voluntario.agregarVoluntariado(this);
     }
 
     public void puntuarParticipantes() {

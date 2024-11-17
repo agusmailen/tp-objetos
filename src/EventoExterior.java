@@ -7,7 +7,7 @@ public class EventoExterior extends Voluntariado {
         this.idiomaRequerido = idiomaRequerido;
     }
 
-    public boolean aceptarPostulante(Postulante voluntario) {
+    public void aceptarPostulante(Postulante voluntario) throws ExcepcionVoluntariado {
         boolean aceptarParticipante = false;
 
         for (Idioma idioma : voluntario.getIdiomas()) {
@@ -17,12 +17,11 @@ public class EventoExterior extends Voluntariado {
         }
 
         if(!aceptarParticipante) {
-            throw new ExcepcionIdioma("No es posible aceptar a este postulante");
+            throw new ExcepcionVoluntariado("No es posible aceptar a este postulante");
         }
 
         pasticipantes.add(voluntario);
         voluntario.agregarVoluntariado(this);
-        return aceptarParticipante;
     };
 
     public void puntuarParticipantes() {
