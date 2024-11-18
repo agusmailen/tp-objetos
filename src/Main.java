@@ -249,5 +249,29 @@ public class Main {
         System.out.println("Puntuacion de Ana: " + ana.getPuntuacion());
         System.out.println("*****************************************");
         System.out.println("\n");
+
+        //puntuacion de los voluntariados
+        System.out.println("Puntuacion de los voluntariados");
+        System.out.println("*****************************************");
+        System.out.println("Puntuacion de voluntariado Rosas: " + voluntariadoRosas.getPuntuacion());
+        System.out.println("Puntuacion de voluntariado Maktub: " + voluntariadoMaktub.getPuntuacion());
+        System.out.println("Puntuacion de voluntariado Matematica: " + voluntariadoMatematica.getPuntuacion());
+        System.out.println("Puntuacion de voluntariado FIFA: " + voluntariadoFIFA.getPuntuacion());
+        System.out.println("*****************************************");
+        System.out.println("\n");
+
+        carlos.puntuarVoluntariados(10);
+        rocio.puntuarVoluntariados(30);
+        juan.puntuarVoluntariados(20);
+        maria.puntuarVoluntariados(20);
+
+        System.out.println("Puntuacion de los voluntariados");
+        System.out.println("*****************************************");
+        System.out.println("Puntuacion de voluntariado Rosas: " + voluntariadoRosas.getPuntuacion());
+        System.out.println("Puntuacion de voluntariado Maktub: " + voluntariadoMaktub.getPuntuacion());
+        System.out.println("Puntuacion de voluntariado Matematica: " + voluntariadoMatematica.getPuntuacion());
+        System.out.println("Puntuacion de voluntariado FIFA: " + voluntariadoFIFA.getPuntuacion());
+        System.out.println("*****************************************");
+        System.out.println("\n");
     }
 }

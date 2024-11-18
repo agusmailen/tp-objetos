@@ -34,4 +34,8 @@ public  abstract class Voluntariado {
         this.puntuacion += puntuacionDada;
     }
 
+    public int getPuntuacion() {
+        return puntuacion;
+    }
+
 }
