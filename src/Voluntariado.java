@@ -10,7 +10,7 @@ public  abstract class Voluntariado {
 
     protected int puntuacionBaseEntregable;
 
-    protected HashSet<Postulante> pasticipantes = new HashSet<Postulante>();
+    protected HashSet<Postulante> participantes = new HashSet<Postulante>();
 
     public Voluntariado(int cantidadDeDias, String ubicacion, int puntuacionBaseEntregable) {
         this.cantidadDeDias = cantidadDeDias;
@@ -18,14 +18,14 @@ public  abstract class Voluntariado {
         this.puntuacionBaseEntregable = puntuacionBaseEntregable;
     }
 
-    public HashSet<Postulante> getPasticipantes() {
-        return pasticipantes;
+    public HashSet<Postulante> getparticipantes() {
+        return participantes;
     }
 
     public abstract void aceptarPostulante(Postulante voluntario);
 
     public  void puntuarParticipantes() {
-        for (Postulante participante: pasticipantes) {
+        for (Postulante participante: participantes) {
             participante.recibirPuntos(puntuacionBaseEntregable);
         }
     }

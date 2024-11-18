@@ -13,16 +13,16 @@ public class Hostel extends Voluntariado {
     }
 
     public void aceptarPostulante(Postulante voluntario) throws ExcepcionVoluntariado {
-        boolean aceptarParticipante = voluntario.getEdad() >= edadMinima &&  pasticipantes.size() < cupoMaximo && voluntario.getPuntuacion() >= puntuacionMinima;
+        boolean aceptarParticipante = voluntario.getEdad() >= edadMinima &&  participantes.size() < cupoMaximo && voluntario.getPuntuacion() >= puntuacionMinima;
         if(!aceptarParticipante) {
             throw new ExcepcionVoluntariado("No es posible aceptar a este postulante");
         }
-        pasticipantes.add(voluntario);
+        participantes.add(voluntario);
         voluntario.agregarVoluntariado(this);
     }
 
     public void puntuarParticipantes(){
-        for (Postulante participante: pasticipantes) {
+        for (Postulante participante: participantes) {
             int puntuacion = 10;
             participante.recibirPuntos(puntuacion);
         }

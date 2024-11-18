@@ -14,7 +14,7 @@ public class Educacion extends Voluntariado {
             throw new ExcepcionVoluntariado("No es posible aceptar a este postulante");
         }
 
-        pasticipantes.add(voluntario);
+        participantes.add(voluntario);
         voluntario.agregarVoluntariado(this);
     };
 }

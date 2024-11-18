@@ -20,13 +20,13 @@ public class EventoExterior extends Voluntariado {
             throw new ExcepcionVoluntariado("No es posible aceptar a este postulante");
         }
 
-        pasticipantes.add(voluntario);
+        participantes.add(voluntario);
         voluntario.agregarVoluntariado(this);
     };
 
    @Override
     public void puntuarParticipantes() {
-        for (Postulante participante: pasticipantes) {
+        for (Postulante participante: participantes) {
             int puntuacion = puntuacionBaseEntregable + ( participante.getIdiomas().size() - 1 ) * 5;
             participante.recibirPuntos(puntuacion);
         }
