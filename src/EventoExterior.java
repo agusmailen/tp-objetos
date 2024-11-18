@@ -22,9 +22,7 @@ public class EventoExterior extends Voluntariado {
             }
         }
 
-        if(sabeElIdioma && tieneElNivel) {
-            aceptarPostulante = true;
-        }
+        aceptarPostulante = sabeElIdioma && tieneElNivel;
 
         if(!aceptarPostulante && !sabeElIdioma) {
             throw new ExcepcionVoluntariado("No es posible aceptar a este postulante porque no sabe el idioma requerido");
