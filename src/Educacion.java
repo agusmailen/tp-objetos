@@ -11,7 +11,7 @@ public class Educacion extends Voluntariado {
         boolean aceptarParticipante = voluntario.getCursos().contains(cursoRequerido);
 
         if (!aceptarParticipante) {
-            throw new ExcepcionVoluntariado("No es posible aceptar a este postulante");
+            throw new ExcepcionVoluntariado("No es posible aceptar a este postulante porque no tiene el curso requerido");
         }
 
         participantes.add(voluntario);

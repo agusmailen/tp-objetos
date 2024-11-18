@@ -8,21 +8,37 @@ public class EventoExterior extends Voluntariado {
     }
 
     public void aceptarPostulante(Postulante voluntario) throws ExcepcionVoluntariado {
-        boolean aceptarParticipante = false;
 
-        for (Idioma idioma : voluntario.getIdiomas()) {
-            if (idioma.getNombre().equalsIgnoreCase(this.idiomaRequerido.getNombre()) && idioma.getNivel() >= this.idiomaRequerido.getNivel()) {
-                aceptarParticipante = true;
+        boolean aceptarPostulante = false;
+        boolean sabeElIdioma = false;
+        boolean tieneElNivel = false;
+
+        for(Idioma idioma : voluntario.getIdiomas()) {
+            if(idioma.getNombre().equalsIgnoreCase(this.idiomaRequerido.getNombre())) {
+                sabeElIdioma = true;
+                if(idioma.getNivel() >= this.idiomaRequerido.getNivel()) {
+                    tieneElNivel = true;
+                }
             }
         }
 
-        if(!aceptarParticipante) {
-            throw new ExcepcionVoluntariado("No es posible aceptar a este postulante");
+        if(sabeElIdioma && tieneElNivel) {
+            aceptarPostulante = true;
+        }
+
+        if(!aceptarPostulante && !sabeElIdioma) {
+            throw new ExcepcionVoluntariado("No es posible aceptar a este postulante porque no sabe el idioma requerido");
+        }
+
+        if(!aceptarPostulante && !tieneElNivel) {
+            throw new ExcepcionVoluntariado("No es posible aceptar a este postulante porque no tiene el nivel requerido del idioma");
         }
 
         participantes.add(voluntario);
         voluntario.agregarVoluntariado(this);
-    };
+
+
+    }
 
    @Override
     public void puntuarParticipantes() {

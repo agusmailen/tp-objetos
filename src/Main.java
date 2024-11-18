@@ -14,7 +14,7 @@ public class Main {
 
         //Voluntariodos de Hostel
 
-        Hostel voluntariadoRosas = new Hostel(10, "Argentina - Buenos Aires", 10, 18, 5, 25);
+        Hostel voluntariadoRosas = new Hostel(10, "Argentina - Buenos Aires", 10, 18, 1, 25);
         Hostel voluntariadoMaktub = new Hostel(15, "Córdoba - Los Cocos", 15,19, 5, 25);
 
         //Voluntariado de Educacion
@@ -47,41 +47,54 @@ public class Main {
         System.out.println("\n");
 
         //try catch para intentar agregar a los postulantes a los voluntariados
+
+        System.out.println("Agrego postulantes al voluntariado Maktub");
+        System.out.println("*****************************************");
+
+
+        System.out.println("Intento agregar a Camila al voluntariado Maktub: ");
         try {
             voluntariadoMaktub.aceptarPostulante(camila);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Carlos al voluntariado Maktub: ");
         try {
             voluntariadoMaktub.aceptarPostulante(carlos);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Matias al voluntariado Maktub: ");
         try {
             voluntariadoMaktub.aceptarPostulante(matias);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Micaela al voluntariado Maktub: ");
         try {
             voluntariadoMaktub.aceptarPostulante(micaela);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Rocio al voluntariado Maktub: ");
         try {
             voluntariadoMaktub.aceptarPostulante(rocio);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Juan al voluntariado Maktub: ");
         try {
             voluntariadoMaktub.aceptarPostulante(juan);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Maria al voluntariado Maktub: ");
         try {
             voluntariadoMaktub.aceptarPostulante(maria);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Ana al voluntariado Maktub: ");
         try {
             voluntariadoMaktub.aceptarPostulante(ana);
         } catch (ExcepcionVoluntariado excepcion) {
@@ -104,46 +117,125 @@ public class Main {
         System.out.println("*****************************************");
         System.out.println("\n");
 
+        //Agrego a los participantes al voluntariado Rosas
+
+        System.out.println("Agrego postulantes al voluntariado Rosas");
+        System.out.println("*****************************************");
+
+        System.out.println("Intento agregar a Camila al voluntariado Rosas: ");
+        try {
+            voluntariadoRosas.aceptarPostulante(camila);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
+        System.out.println("Intento agregar a Carlos al voluntariado Rosas: ");
+        try {
+            voluntariadoRosas.aceptarPostulante(carlos);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
+        System.out.println("Intento agregar a Matias al voluntariado Rosas: ");
+        try {
+            voluntariadoRosas.aceptarPostulante(matias);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
+        System.out.println("Intento agregar a Micaela al voluntariado Rosas: ");
+        try {
+            voluntariadoRosas.aceptarPostulante(micaela);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
+        System.out.println("Intento agregar a Rocio al voluntariado Rosas: ");
+        try {
+            voluntariadoRosas.aceptarPostulante(rocio);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
+        System.out.println("Intento agregar a Juan al voluntariado Rosas: ");
+        try {
+            voluntariadoRosas.aceptarPostulante(juan);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
+        System.out.println("Intento agregar a Maria al voluntariado Rosas: ");
+        try {
+            voluntariadoRosas.aceptarPostulante(maria);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
+        System.out.println("Intento agregar a Ana al voluntariado Rosas: ");
+        try {
+            voluntariadoRosas.aceptarPostulante(ana);
+        } catch (ExcepcionVoluntariado excepcion) {
+            System.out.println("Se capturó la excepción: " + excepcion.getMessage());
+        }
+        System.out.println("\n");
+
+        System.out.println("Experiencia de todos los participantes");
+        System.out.println("*****************************************");
+        System.out.println("Experiencia de Carlos" + carlos.getVoluntariados());
+        System.out.println("Experiencia de Matias" + matias.getVoluntariados());
+        System.out.println("Experiencia de Camila" + camila.getVoluntariados());
+        System.out.println("Experiencia de Micaela" + micaela.getVoluntariados());
+        System.out.println("Experiencia de Rocio" + rocio.getVoluntariados());
+        System.out.println("Experiencia de Juan" + juan.getVoluntariados());
+        System.out.println("Experiencia de Maria" + maria.getVoluntariados());
+        System.out.println("Experiencia de Ana" + ana.getVoluntariados());
+        System.out.println("*****************************************");
+        System.out.println("\n");
+
         //Agrego a rocio el curso de matematica
         rocio.agregarCurso(matematica);
 
         //try catch para intentar agregar a los postulantes a los voluntariados de matematica
 
+        System.out.println("Agrego postulantes al voluntariado de Matematica");
+        System.out.println("*****************************************");
+
+        System.out.println("Intento agregar a Camila al voluntariado de Matematica: ");
         try {
             voluntariadoMatematica.aceptarPostulante(camila);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Carlos al voluntariado de Matematica: ");
         try {
             voluntariadoMatematica.aceptarPostulante(carlos);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Matias al voluntariado de Matematica: ");
         try {
             voluntariadoMatematica.aceptarPostulante(matias);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Micaela al voluntariado de Matematica: ");
         try {
             voluntariadoMatematica.aceptarPostulante(micaela);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Rocio al voluntariado de Matematica: ");
         try {
             voluntariadoMatematica.aceptarPostulante(rocio);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Juan al voluntariado de Matematica: ");
         try {
             voluntariadoMatematica.aceptarPostulante(juan);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Maria al voluntariado de Matematica: ");
         try {
             voluntariadoMatematica.aceptarPostulante(maria);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Ana al voluntariado de Matematica: ");
         try {
             voluntariadoMatematica.aceptarPostulante(ana);
         } catch (ExcepcionVoluntariado excepcion) {
@@ -174,41 +266,53 @@ public class Main {
         maria.agregarIdioma(inglesMedio);
 
         //try catch para intentar agregar a los postulantes a los voluntariados de ingles
+
+        System.out.println("Agrego postulantes al voluntariado de FIFA");
+        System.out.println("*****************************************");
+
+        System.out.println("Intento agregar a Camila al voluntariado de FIFA: ");
         try {
             voluntariadoFIFA.aceptarPostulante(camila);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Carlos al voluntariado de FIFA: ");
         try {
             voluntariadoFIFA.aceptarPostulante(carlos);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Matias al voluntariado de FIFA: ");
         try {
             voluntariadoFIFA.aceptarPostulante(matias);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Micaela al voluntariado de FIFA: ");
         try {
             voluntariadoFIFA.aceptarPostulante(micaela);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Rocio al voluntariado de FIFA: ");
         try {
             voluntariadoFIFA.aceptarPostulante(rocio);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Juan al voluntariado de FIFA: ");
         try {
             voluntariadoFIFA.aceptarPostulante(juan);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Maria al voluntariado de FIFA: ");
         try {
             voluntariadoFIFA.aceptarPostulante(maria);
         } catch (ExcepcionVoluntariado excepcion) {
             System.out.println("Se capturó la excepción: " + excepcion.getMessage());
         }
+        System.out.println("Intento agregar a Ana al voluntariado de FIFA: ");
         try {
             voluntariadoFIFA.aceptarPostulante(ana);
         } catch (ExcepcionVoluntariado excepcion) {
@@ -231,13 +335,27 @@ public class Main {
         System.out.println("\n");
 
         //puntuacion de los participantes
+
+        System.out.println("Puntuacion de todos los participantes antes de recibir puntos");
+        System.out.println("*****************************************");
+        System.out.println("Puntuacion de Carlos: " + carlos.getPuntuacion());
+        System.out.println("Puntuacion de Matias: " + matias.getPuntuacion());
+        System.out.println("Puntuacion de Camila: " + camila.getPuntuacion());
+        System.out.println("Puntuacion de Micaela: " + micaela.getPuntuacion());
+        System.out.println("Puntuacion de Rocio: " + rocio.getPuntuacion());
+        System.out.println("Puntuacion de Juan: " + juan.getPuntuacion());
+        System.out.println("Puntuacion de Maria: " + maria.getPuntuacion());
+        System.out.println("Puntuacion de Ana: " + ana.getPuntuacion());
+        System.out.println("*****************************************");
+        System.out.println("\n");
+
         voluntariadoFIFA.puntuarParticipantes();
         voluntariadoMatematica.puntuarParticipantes();
         voluntariadoMaktub.puntuarParticipantes();
         voluntariadoRosas.puntuarParticipantes();
 
         //solo le agrega una puntuacion a Carlos
-        System.out.println("Puntuacion de todos los participantes");
+        System.out.println("Puntuacion de todos los participantes luego de recibir puntos");
         System.out.println("*****************************************");
         System.out.println("Puntuacion de Carlos: " + carlos.getPuntuacion());
         System.out.println("Puntuacion de Matias: " + matias.getPuntuacion());
@@ -251,7 +369,7 @@ public class Main {
         System.out.println("\n");
 
         //puntuacion de los voluntariados
-        System.out.println("Puntuacion de los voluntariados");
+        System.out.println("Puntuacion de los voluntariados antes de recibir puntos");
         System.out.println("*****************************************");
         System.out.println("Puntuacion de voluntariado Rosas: " + voluntariadoRosas.getPuntuacion());
         System.out.println("Puntuacion de voluntariado Maktub: " + voluntariadoMaktub.getPuntuacion());
@@ -261,11 +379,16 @@ public class Main {
         System.out.println("\n");
 
         carlos.puntuarVoluntariados(10);
+        matias.puntuarVoluntariados(10);
+        camila.puntuarVoluntariados(10);
+        micaela.puntuarVoluntariados(10);
         rocio.puntuarVoluntariados(30);
         juan.puntuarVoluntariados(20);
         maria.puntuarVoluntariados(20);
+        ana.puntuarVoluntariados(10);
 
-        System.out.println("Puntuacion de los voluntariados");
+
+        System.out.println("Puntuacion de los voluntariados luego de recibir puntos");
         System.out.println("*****************************************");
         System.out.println("Puntuacion de voluntariado Rosas: " + voluntariadoRosas.getPuntuacion());
         System.out.println("Puntuacion de voluntariado Maktub: " + voluntariadoMaktub.getPuntuacion());
