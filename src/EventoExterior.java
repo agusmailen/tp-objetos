@@ -9,17 +9,13 @@ public class EventoExterior extends Voluntariado {
 
     public void aceptarPostulante(Postulante voluntario) throws ExcepcionVoluntariado {
 
-        boolean aceptarPostulante = false;
+        boolean aceptarPostulante;
         boolean sabeElIdioma = false;
         boolean tieneElNivel = false;
 
         for(Idioma idioma : voluntario.getIdiomas()) {
-            if(idioma.getNombre().equalsIgnoreCase(this.idiomaRequerido.getNombre())) {
-                sabeElIdioma = true;
-                if(idioma.getNivel() >= this.idiomaRequerido.getNivel()) {
-                    tieneElNivel = true;
-                }
-            }
+            sabeElIdioma = idioma.getNombre().equalsIgnoreCase(this.idiomaRequerido.getNombre());
+            tieneElNivel = idioma.getNivel() >= this.idiomaRequerido.getNivel();
         }
 
         aceptarPostulante = sabeElIdioma && tieneElNivel;
@@ -34,8 +30,6 @@ public class EventoExterior extends Voluntariado {
 
         participantes.add(voluntario);
         voluntario.agregarVoluntariado(this);
-
-
     }
 
    @Override

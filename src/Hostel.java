@@ -14,23 +14,11 @@ public class Hostel extends Voluntariado {
     
     public void aceptarPostulante(Postulante voluntario) throws ExcepcionVoluntariado{
         boolean aceptarPostulante = false;
-        boolean tieneEdadMinima = false;
-        boolean tienePuntuacionMinima = false;
-        boolean tieneCupoMaximo = false;
+        boolean tieneEdadMinima = voluntario.getEdad() >= this.edadMinima;
+        boolean tienePuntuacionMinima = voluntario.getPuntuacion() >= this.puntuacionMinima;
+        boolean tieneCupo = participantes.size() < this.cupoMaximo;
 
-        if(voluntario.getEdad() >= this.edadMinima) {
-            tieneEdadMinima = true;
-        }
-
-        if(voluntario.getPuntuacion() >= this.puntuacionMinima) {
-            tienePuntuacionMinima = true;
-        }
-
-        if(participantes.size() < this.cupoMaximo) {
-            tieneCupoMaximo = true;
-        }
-
-        aceptarPostulante = tieneEdadMinima && tienePuntuacionMinima && tieneCupoMaximo;
+        aceptarPostulante = tieneEdadMinima && tienePuntuacionMinima && tieneCupo;
 
         if(!aceptarPostulante && !tieneEdadMinima) {
             throw new ExcepcionVoluntariado("No es posible aceptar a este postulante porque no tiene la edad mínima requerida");
@@ -40,13 +28,11 @@ public class Hostel extends Voluntariado {
             throw new ExcepcionVoluntariado("No es posible aceptar a este postulante porque no tiene la puntuación mínima requerida");
         }
 
-        if(!aceptarPostulante && !tieneCupoMaximo) {
+        if(!aceptarPostulante && !tieneCupo) {
             throw new ExcepcionVoluntariado("No es posible aceptar a este postulante porque se ha alcanzado el cupo máximo en el voluntariado");
         }
 
         participantes.add(voluntario);
         voluntario.agregarVoluntariado(this);
     }
-
-
 }
