@@ -54,9 +54,9 @@ public class Postulante implements Puntuable {
         this.puntuacion += puntosDatos;
     }
 
-    public void puntuarVoluntariados(int puntuacion) {
+    public void puntuarVoluntariados(int puntuacionEntregada) {
         for (Voluntariado voluntariado : voluntariados) {
-            voluntariado.recibirPuntos(puntuacion);
+            voluntariado.recibirPuntos(puntuacionEntregada);
         }
     }
 }

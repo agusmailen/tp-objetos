@@ -9,7 +9,7 @@ public class Educacion extends Voluntariado {
 
     public void aceptarPostulante(Postulante voluntario) throws ExcepcionVoluntariado {
        
-        if (!(voluntario.getCursos().contains(cursoRequerido))) {
+        if (!voluntario.getCursos().contains(cursoRequerido)) {
             throw new ExcepcionVoluntariado("No es posible aceptar a este postulante porque no tiene el curso requerido");
         }
 
