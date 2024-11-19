@@ -1,6 +1,6 @@
 import java.util.HashSet;
 
-public  abstract class Voluntariado {
+public  abstract class Voluntariado implements Puntuable {
 
     protected int cantidadDeDias;
 
